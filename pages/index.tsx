@@ -8,7 +8,7 @@ const Home: NextPage = () => {
             <title>XOMA VPN</title>
         </Head>
         <div className={'bg-black text-white text-center pb-8 w-full h-[100vh] flex flex-col justify-center relative items-center gap-4'}>
-            <h1 className={'text-7xl font-bold px-4 bg-clip-text text-transparent bg-[url("../public/onni-anttoora-5K8RnvDKBr4-unsplash.jpg")]'} style={{backgroundPosition: '100% 22%'}}>
+            <h1 className={'text-7xl font-bold px-4 bg-clip-text text-transparent bg-[url("../public/onni-anttoora-5K8RnvDKBr4-unsplash.jpg")]'} style={{backgroundPosition: '100% 21%', backgroundSize: '100%'}}>
                 XOMA VPN
             </h1>
             <h3 className={'text-xl'}><MorphicText words={['надежный', 'удобный', 'быстрый', 'безопасный', 'легкий', 'приватный']}/> VPN сервис<br/>от Александра Сиротина</h3>
