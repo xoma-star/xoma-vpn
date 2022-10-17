@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'text-shimmer': 'text-shimmer 5s ease infinite',
+        'text-shimmer': 'text-shimmer 15s ease infinite',
         'text-in': 'text-in 700ms cubic-bezier(0.36,0.66,0.04,1) forwards',
         'text-out': 'text-out 700ms cubic-bezier(0.36,0.66,0.04,1) forwards'
       },
