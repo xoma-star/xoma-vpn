@@ -3,23 +3,22 @@ import Head from "next/head";
 import MorphicText from "../components/MorphicText";
 import Image from "next/image";
 import Title from "../components/Title";
+import Navbar from "../components/Navbar";
+import Button from "../components/Button";
 
 const Home: NextPage = () => {
     return <div className={'flex flex-col items-center'}>
         <Head>
             <title>XOMA VPN</title>
         </Head>
+        <Navbar/>
         <div className={'bg-black text-white text-center pb-8 w-full h-[100vh] flex flex-col justify-center relative items-center gap-4 relative'}>
             <h1 className={'text-7xl md:text-9xl font-bold px-4 bg-clip-text text-transparent bg-[url("../public/onni-anttoora-5K8RnvDKBr4-unsplash.jpg")]'} style={{backgroundPosition: '100% 21%', backgroundSize: '100%'}}>
                 XOMA VPN
             </h1>
             <h3 className={'text-xl'}><MorphicText words={['надежный', 'удобный', 'быстрый', 'безопасный', 'легкий', 'приватный']}/> VPN сервис<br/>от Александра Сиротина</h3>
-            <button
-                className={'text-white border-4 border-white text-xl px-4 py-2 mt-12 hover:bg-white hover:text-black duration-300'}
-                onClick={() => window.open('https://t.me/xomavpn_bot')}>
-                Попробовать
-            </button>
-            <div className={'absolute bottom-3'}><Image src={'/arrow-down.svg'} width={30} height={30}/></div>
+            <Button className={'mt-8'} onClick={() => window.open('https://t.me/xomavpn_bot')}>Попробовать</Button>
+            <div className={'absolute bottom-3'}><Image src={'/arrow-down.svg'} alt={'arrow'} width={30} height={30}/></div>
         </div>
         <div className={'px-8'}>
             <div className={'py-16 text-justify md:text-left'}>
@@ -49,11 +48,7 @@ const Home: NextPage = () => {
         </div>
         <div className={'bg-black text-white text-center py-20 px-8 w-full flex flex-col justify-center relative items-center gap-4 relative'}>
             <Title size={"m"}>Готовы попробовать XOMA VPN?</Title>
-            <button
-                className={'text-white border-4 border-white text-xl px-4 py-2 mt-12 hover:bg-white hover:text-black duration-300'}
-                onClick={() => window.open('https://t.me/xomavpn_bot')}>
-                Попробовать
-            </button>
+            <Button className={'mt-8'} onClick={() => window.open('https://t.me/xomavpn_bot')}>Попробовать</Button>
         </div>
     </div>
 }

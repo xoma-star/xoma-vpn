@@ -10,6 +10,12 @@ html{
 
 * {
     font-family: "Gilroy", -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::selection{
+    background: #fff;
+    color: #000;
 }
 
 @font-face {

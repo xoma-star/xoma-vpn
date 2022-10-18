@@ -1,57 +1,39 @@
 import {NextPage} from "next";
-import Container from "../components/Container";
-import Block from "../components/Block";
-import Title from "../components/Title";
+import Head from "next/head";
 import Navbar from "../components/Navbar";
-import TextHighlighted from "../components/TextHighlighted";
+import Title from "../components/Title";
 
 const Pricing: NextPage = () => {
 
-    return <div className={'text-purple-900'}>
+    return <div className={'flex flex-col items-center bg-black min-h-[100vh]'}>
+        <Head>
+            <title>Тарифы</title>
+        </Head>
         <Navbar/>
-        <div className={'flex flex-col text-center items-center'}>
-            <Title className={'my-8'} size={'l'}>Выберите подходящий план</Title>
-            <div className={'flex flex-row gap-8 w-full max-w-[1200px]'}>
-                <Container>
-                    <Block className={'flex flex-col justify-between'}>
-                        <div>
-                            <Title size={'m'} className={'mb-4'}>Бесплатный</Title>
-                            <p className={'text-xl mb-4'}>Подойдет, чтобы попробовать сервис</p>
-                            <ul className={'flex flex-col list-disc text-left p-4'}>
-                                <li>Ограничение трафика 500 МБ / месяц</li>
-                            </ul>
-                        </div>
-                        <button className={'border-purple-900 border-2'}>Попробовать</button>
-                    </Block>
-                    <Block className={'flex flex-col justify-between'}>
-                        <div>
-                            <Title size={'m'} className={'mb-4'}>Простой</Title>
-                            <p className={'text-xl mb-4'}>Чтобы зайти в Инстаграм раз в день</p>
-                            <ul className={'flex flex-col list-disc text-left p-4'}>
-                                <li>Доступ к одному серверу</li>
-                                <li>Без ограничений по скорости</li>
-                                <li>Без ограничений по трафику</li>
-                                <li>1 подключенное устройство</li>
-                            </ul>
-                            <Title className={'mb-4'} size={'s'}>80 р./мес.</Title>
-                        </div>
-                        <button className={'border-purple-900 border-2'}>Подключить</button>
-                    </Block>
-                </Container>
-                <Container className={'scale-110'}>
-                    <Block className={'flex flex-col justify-between'}>
-                        <Title size={'m'} className={'mb-4'}>Полный фарш</Title>
-                        <p className={'text-xl mb-4'}>Максимум от <TextHighlighted>XOMA VPN</TextHighlighted></p>
-                        <ul className={'flex flex-col list-disc text-left p-4'}>
-                            <li>Доступ ко всем серверам</li>
-                            <li>Без ограничений по скорости</li>
-                            <li>Без ограничений по трафику</li>
-                            <li>До 5 подключенных устройств</li>
-                        </ul>
-                        <Title className={'mb-4'} size={'s'}>240 р./мес.</Title>
-                        <button className={'border-purple-900 border-2'}>Подключить</button>
-                    </Block>
-                </Container>
+        <div className={'px-8 py-40 items-center flex flex-row flex-wrap gap-40 text-white min-h-[100vh] h-full'}>
+            <div className={'basis-1/3'}>
+                <Title size={'l'}>Бесплатный</Title>
+                <p className={'md:text-5xl text-3xl'}>Подойдет, чтобы попробовать сервис</p>
+                <button
+                    className={'text-white border-4 border-white text-xl px-4 py-2 mt-12 hover:bg-white hover:text-black duration-300'}
+                    onClick={() => window.open('https://t.me/xomavpn_bot')}>
+                    Попробовать
+                </button>
+            </div>
+            <div>
+                <Title size={'l'}>Все включено</Title>
+                <ul className={'md:text-5xl text-3xl'}>
+                    <li>Доступ ко всем серверам.</li>
+                    <li>Скорость до 1 ГБит/с</li>
+                    <li>Безопасный интернет</li>
+                    <li>Обход блокировок</li>
+                </ul>
+                <Title size={'m'}>80 р./мес.</Title>
+                <button
+                    className={'text-white border-4 border-white text-xl px-4 py-2 mt-12 hover:bg-white hover:text-black duration-300'}
+                    onClick={() => window.open('https://t.me/xomavpn_bot')}>
+                    Подключить
+                </button>
             </div>
         </div>
     </div>

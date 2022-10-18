@@ -1,17 +1,32 @@
 import Link from "next/link";
+import Button from "../Button";
+import {useState} from "react";
 
 interface props{
     className?: string
 }
 
 const Navbar = ({className = ''}: props) => {
-    return <nav className={'z-50 text-lg p-8 text-purple-900 font-semibold ' + className}>
-        <ul className={'flex flex-row gap-6 justify-end'}>
-            <li className={'hover:text-fuchsia-500'}><Link href={'/'}>Главная</Link></li>
-            <li className={'hover:text-fuchsia-500'}><Link href={'/pricing'}>Тарифы</Link></li>
-            <li className={'hover:text-fuchsia-500'}><Link href={'/restore'}>Восстановить покупки</Link></li>
-            <li className={'hover:text-fuchsia-500'}><Link href={'/tg'}><button>Купить подписку</button></Link></li>
-        </ul>
+    const [mobileMenu, setMobileMenu] = useState(false)
+
+    return <nav className={'w-full z-50 text-lg p-8 text-white absolute top-0 font-semibold ' + className}>
+        <div className={'flex-row items-center gap-6 justify-end flex'}>
+            <ul className={'flex-row items-center gap-6 justify-end hidden md:flex'}>
+                <li className={'hover:underline'}><Link href={'/'}>Главная</Link></li>
+                <li className={'hover:underline'}><Link href={'/pricing'}>Тарифы</Link></li>
+                <li className={'hover:underline'}><Link href={'/restore'}>Восстановить покупки</Link></li>
+                <Link href={'/login'}><li><Button>Войти</Button></li></Link>
+            </ul>
+            <Button onClick={() => setMobileMenu(x => !x)} className={'block md:hidden z-30'}>Меню</Button>
+        </div>
+        {mobileMenu && <div className={'fixed w-full h-full bg-black text-white left-0 top-0 px-8 text-4xl'}>
+            <ul className={'flex-col items-start gap-6 justify-center flex text-white h-full'}>
+                <li><Link href={'/'}>Главная</Link></li>
+                <li><Link href={'/pricing'}>Тарифы</Link></li>
+                <li><Link href={'/restore'}>Восстановить покупки</Link></li>
+                <Link href={'/login'}><li><Button>Войти</Button></li></Link>
+            </ul>
+        </div>}
     </nav>
 }
 
