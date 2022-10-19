@@ -21,27 +21,27 @@ const Home: NextPage = () => {
             <div className={'absolute bottom-3'}><Image src={'/arrow-down.svg'} alt={'arrow'} width={30} height={30}/></div>
         </div>
         <div className={'px-8'}>
-            <div className={'py-16 text-justify md:text-left'}>
+            <div className={'py-16 text-left md:text-left'}>
                 <Title className={'py-8'} size={'l'}>Всего 80 р./мес.</Title>
                 <p className={'md:text-5xl text-3xl'}>Платите 80 рублей раз в месяц. Больше никаких дополнительных сборов и комиссий.</p>
             </div>
-            <div className={'py-16 text-justify md:text-right'}>
+            <div className={'py-16 text-left md:text-right'}>
                 <Title className={'py-8'} size={'l'}>Сервера за границей</Title>
                 <p className={'md:text-5xl text-3xl'}>Используйте заблокированные сервисы как прежде. Instagram, Twitter, Facebook, LinkedIn</p>
             </div>
-            <div className={'py-16 text-justify md:text-left'}>
+            <div className={'py-16 text-left md:text-left'}>
                 <Title className={'py-8'} size={'l'}>Гигабитный порт</Title>
                 <p className={'md:text-5xl text-3xl'}>Высокая скорость и стабильность соединения. Смотрите стримы без провисаний. Загрузки файлов без ограничей. Что уж говорить о простом серфинге.</p>
             </div>
-            <div className={'py-16 text-justify md:text-right'}>
+            <div className={'py-16 text-left md:text-right'}>
                 <Title className={'py-8'} size={'l'}>Скройтесь от посторонних глаз</Title>
                 <p className={'md:text-5xl text-3xl'}>Трафик, проходящий через VPN шифруется, а ваш IP недоступен внешним сайтам. Мошенникам будет сложнее вас отследить, а ваши данные будут в безопасности.</p>
             </div>
-            <div className={'py-16 text-justify md:text-left'}>
+            <div className={'py-16 text-left md:text-left'}>
                 <Title className={'py-8'} size={'l'}>Безопасный Интернет за пару секунд</Title>
                 <p className={'md:text-5xl text-3xl'}>Подключитесь к VPN нажатием на один переключатель и забудьте о нем. XOMA VPN сам сделает ваше использование интернета безопасным.</p>
             </div>
-            <div className={'py-16 text-justify md:text-right'}>
+            <div className={'py-16 text-left md:text-right'}>
                 <Title className={'py-8'} size={'l'}>Можно использовать на всех устройствах</Title>
                 <p className={'md:text-5xl text-3xl'}>XOMA VPN доступен для всех популярных платформ, включая телефоны, планшеты, компьютеры и другие девайсы.</p>
             </div>
