@@ -14,6 +14,7 @@ const Navbar = ({className = ''}: props) => {
             <ul className={'flex-row items-center gap-6 justify-end hidden md:flex'}>
                 <li className={'hover:underline'}><Link href={'/'}>Главная</Link></li>
                 <li className={'hover:underline'}><Link href={'/pricing'}>Тарифы</Link></li>
+                <li className={'hover:underline'}><Link href={'/servers'}>Сервера</Link></li>
                 <li className={'hover:underline'}><Link href={'/restore'}>Восстановить покупки</Link></li>
                 <Link href={'/login'}><li><Button>Войти</Button></li></Link>
             </ul>
@@ -23,6 +24,7 @@ const Navbar = ({className = ''}: props) => {
             <ul className={'flex-col items-start gap-6 justify-center flex text-white h-full'}>
                 <li><Link href={'/'}>Главная</Link></li>
                 <li><Link href={'/pricing'}>Тарифы</Link></li>
+                <li><Link href={'/servers'}>Сервера</Link></li>
                 <li><Link href={'/restore'}>Восстановить покупки</Link></li>
                 <Link href={'/login'}><li><Button>Войти</Button></li></Link>
             </ul>
