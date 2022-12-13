@@ -39,7 +39,7 @@ const Login = () => {
                 header={'Авторизация'}
             >
                 {status === 0 && <FormItem><Input label={'Номер телефона'} type={'phone'} onChange={(e) => setPhone(parseInt(e))}/></FormItem>}
-                {status === 1 && <FormItem>Подтверждение отправлено ботом в телеграм. Нажмите кнопку "Подтвердить". Страница автоматически обновится.</FormItem>}
+                {status === 1 && <FormItem>Подтверждение отправлено ботом в телеграм. Страница автоматически обновится.</FormItem>}
                 {status === 0 && <Button onClick={clickHandler}>Войти</Button>}
                 {status === 1 && <Button onClick={() => setStatus(0)}>Назад</Button>}
             </Form>
