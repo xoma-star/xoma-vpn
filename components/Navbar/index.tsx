@@ -15,8 +15,7 @@ const Navbar = ({className = ''}: props) => {
                 <li className={'hover:underline'}><Link href={'/'}>Главная</Link></li>
                 <li className={'hover:underline'}><Link href={'/pricing'}>Тарифы</Link></li>
                 <li className={'hover:underline'}><Link href={'/servers'}>Сервера</Link></li>
-                <li className={'hover:underline'}><Link href={'/restore'}>Восстановить покупки</Link></li>
-                <Link href={'/login'}><li><Button>Войти</Button></li></Link>
+                <Link href={'/login'}><li><Button>Управлять подпиской</Button></li></Link>
             </ul>
             <Button onClick={() => setMobileMenu(x => !x)} className={'block md:hidden z-30'}>Меню</Button>
         </div>
@@ -25,8 +24,7 @@ const Navbar = ({className = ''}: props) => {
                 <li><Link href={'/'}>Главная</Link></li>
                 <li><Link href={'/pricing'}>Тарифы</Link></li>
                 <li><Link href={'/servers'}>Сервера</Link></li>
-                <li><Link href={'/restore'}>Восстановить покупки</Link></li>
-                <Link href={'/login'}><li><Button>Войти</Button></li></Link>
+                <Link href={'/login'}><li><Button>Управлять подпиской</Button></li></Link>
             </ul>
         </div>}
     </nav>

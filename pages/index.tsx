@@ -5,6 +5,7 @@ import Image from "next/image";
 import Title from "../components/Title";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
+import Link from "next/link";
 
 const Home: NextPage = () => {
     return <div className={'flex flex-col items-center'}>
@@ -17,7 +18,9 @@ const Home: NextPage = () => {
                 XOMA VPN
             </h1>
             <h3 className={'text-xl'}><MorphicText words={['надежный', 'удобный', 'быстрый', 'безопасный', 'легкий', 'приватный']}/> VPN сервис<br/>от Александра Сиротина</h3>
-            <Button className={'mt-8'} onClick={() => window.open('https://t.me/xomavpn_bot')}>Попробовать</Button>
+            <Link href={'/login'}>
+                <Button className={'mt-8'}>Попробовать</Button>
+            </Link>
             <div className={'absolute bottom-3'}><Image src={'/arrow-down.svg'} alt={'arrow'} width={30} height={30}/></div>
         </div>
         <div className={'px-8'}>
@@ -48,7 +51,9 @@ const Home: NextPage = () => {
         </div>
         <div className={'bg-black text-white text-center py-20 px-8 w-full flex flex-col justify-center relative items-center gap-4 relative'}>
             <Title size={"m"}>Готовы попробовать XOMA VPN?</Title>
-            <Button className={'mt-8'} onClick={() => window.open('https://t.me/xomavpn_bot')}>Попробовать</Button>
+            <Link href={'/login'}>
+                <Button className={'mt-8'}>Попробовать</Button>
+            </Link>
         </div>
     </div>
 }

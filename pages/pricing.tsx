@@ -2,6 +2,8 @@ import {NextPage} from "next";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Title from "../components/Title";
+import Button from "../components/Button";
+import Link from "next/link";
 
 const Pricing: NextPage = () => {
 
@@ -14,11 +16,11 @@ const Pricing: NextPage = () => {
             <div className={'basis-1/3'}>
                 <Title size={'l'}>Бесплатный</Title>
                 <p className={'md:text-5xl text-3xl'}>Подойдет, чтобы попробовать сервис</p>
-                <button
-                    className={'text-white border-4 border-white text-xl px-4 py-2 mt-12 hover:bg-white hover:text-black duration-300'}
-                    onClick={() => window.open('https://t.me/xomavpn_bot')}>
-                    Попробовать
-                </button>
+                <Link href={'/login'}>
+                    <Button className={'mt-12'}>
+                        Попробовать
+                    </Button>
+                </Link>
             </div>
             <div>
                 <Title size={'l'}>Все включено</Title>
@@ -29,11 +31,11 @@ const Pricing: NextPage = () => {
                     <li>Обход блокировок</li>
                 </ul>
                 <Title size={'m'}>80 р./мес.</Title>
-                <button
-                    className={'text-white border-4 border-white text-xl px-4 py-2 mt-12 hover:bg-white hover:text-black duration-300'}
-                    onClick={() => window.open('https://t.me/xomavpn_bot')}>
-                    Подключить
-                </button>
+                <Link href={'/login'}>
+                    <Button className={'mt-12'}>
+                        Подключить
+                    </Button>
+                </Link>
             </div>
         </div>
     </div>
